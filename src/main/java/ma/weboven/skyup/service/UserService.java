@@ -2,19 +2,19 @@ package ma.weboven.skyup.service;
 
 import java.util.Collection;
 
-import ma.weboven.skyup.model.UserModel;
+import ma.weboven.skyup.model.User;
 
 public interface UserService {
     // find user by username
-    UserModel findByUsername(String username);
+    User findByUsername(String username);
 
     // CRUD
-    Collection<UserModel> getUsers();
+    Collection<User> getUsers();
 
-    void saveUser(UserModel user);
+    void saveUser(User user);
 
-    void updateUser(UserModel user);
+    void updateUser(User user);
 
-    void deleteUser(UserModel user);
+    void deleteUser(User user);
 
 }

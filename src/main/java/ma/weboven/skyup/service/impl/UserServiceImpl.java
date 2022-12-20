@@ -5,7 +5,7 @@ import java.util.Collection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import ma.weboven.skyup.model.UserModel;
+import ma.weboven.skyup.model.User;
 import ma.weboven.skyup.repository.UserRepository;
 import ma.weboven.skyup.service.UserService;
 
@@ -16,27 +16,27 @@ public class UserServiceImpl implements UserService {
     UserRepository userRepository;
 
     @Override
-    public UserModel findByUsername(String username) {
+    public User findByUsername(String username) {
         return userRepository.findByUsername(username);
     }
 
     @Override
-    public void saveUser(UserModel user) {
+    public void saveUser(User user) {
         userRepository.save(user);
     }
 
     @Override
-    public void updateUser(UserModel user) {
+    public void updateUser(User user) {
         userRepository.save(user);
     }
 
     @Override
-    public void deleteUser(UserModel user) {
+    public void deleteUser(User user) {
         userRepository.delete(user);
     }
 
     @Override
-    public Collection<UserModel> getUsers() {
+    public Collection<User> getUsers() {
 
         return userRepository.findAll();
     }
